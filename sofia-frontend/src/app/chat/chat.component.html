@@ -1,0 +1,24 @@
+<div class="chat-container">
+  <div #messageListContainer class="messages">
+    <div *ngFor="let message of messages" [ngClass]="message.sender">
+      <div class="message-bubble">
+        <strong>{{ message.sender === 'user' ? 'Du' : 'Sofia' }}:</strong>
+        {{ message.text }}
+      </div>
+    </div>
+  </div>
+
+  <form (ngSubmit)="sendMessage()" class="chat-input-form">
+    <input
+      type="text"
+      [(ngModel)]="userInput"
+      name="message"
+      required
+      placeholder="Gib deine Nachricht ein..."
+      class="chat-input"
+    />
+    <button type="submit" class="send-button">
+      &#10140;
+    </button>
+  </form>
+</div>

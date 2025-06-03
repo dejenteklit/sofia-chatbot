@@ -1,0 +1,17 @@
+.about-tooltip {
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  width: max-content;
+  white-space: nowrap;
+}
+.list-group-item.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.about-tooltip {
+  font-size: 0.8rem;
+  white-space: nowrap;
+}

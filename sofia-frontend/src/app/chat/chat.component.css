@@ -1,0 +1,87 @@
+/* src/app/chat/chat.component.css */
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1000px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden; /* Important for scrollable messages */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto; /* Center the chat container */
+}
+
+.messages {
+  flex-grow: 1; /* Allows message area to take available space */
+  padding: 15px;
+  overflow-y: auto; /* Enables scrolling for messages */
+  background-color: #f9f9f9;
+  display: flex; /* Use flexbox to stack messages */
+  flex-direction: column;
+}
+
+.message-bubble {
+  padding: 10px 15px;
+  border-radius: 20px;
+  max-width: 70%;
+  margin-bottom: 10px;
+  word-wrap: break-word; /* Prevents long words from breaking layout */
+}
+
+/* Styles for user messages */
+.user .message-bubble {
+  background-color: #e0f7fa; /* Light blue */
+  color: #333;
+  align-self: flex-end; /* Aligns to the right */
+  border-bottom-right-radius: 5px; /* Slightly adjust for chat look */
+}
+
+/* Styles for Sofia's messages */
+.sofia .message-bubble {
+  background-color: #f1f0f0; /* Light gray */
+  color: #333;
+  align-self: flex-start; /* Aligns to the left */
+  border-bottom-left-radius: 5px; /* Slightly adjust for chat look */
+}
+
+.chat-input-form {
+  display: flex;
+  padding: 15px;
+  border-top: 1px solid #eee;
+  background-color: #fff;
+}
+
+.chat-input {
+  flex-grow: 1; /* Input field takes most of the space */
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  margin-right: 10px;
+  font-size: 1rem;
+  outline: none; /* Remove default focus outline */
+}
+
+.chat-input:focus {
+  border-color: #007bff; /* Highlight on focus */
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.send-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.send-button:hover {
+  background-color: #0056b3;
+}
+
+.send-button:active {
+  background-color: #004085;
+}
